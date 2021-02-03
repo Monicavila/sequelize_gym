@@ -9,11 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       id_actividad: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "actividades",
-          key: 'id'
-        }
+        type: Sequelize.INTEGER
       },
       observaciones: {
         type: Sequelize.TEXT

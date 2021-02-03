@@ -14,6 +14,8 @@ module.exports = {
       },
       id_rutina: {
         type: Sequelize.INTEGER,
+        primaryKey: true,
+        allowNull: false,
         references: {
           model: 'rutinas',
           key: 'id'

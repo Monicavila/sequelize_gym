@@ -4,8 +4,13 @@ module.exports = {
     await queryInterface.createTable('rutina_instructor', {
 
       id_rutina: {
-        type: Sequelize.INTEGER
-        
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        allowNull: false,
+        references: {
+          model: 'rutinas',
+          key: 'id'
+        }
       },
       id_instructor: {
         type: Sequelize.INTEGER,
