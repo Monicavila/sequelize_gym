@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   membresia.init({
     clase: DataTypes.STRING,
-    costo: DataTypes.FLOAT,
+    costo: DataTypes.NUMERIC,
     duracion: DataTypes.INTEGER
   }, {
     sequelize,

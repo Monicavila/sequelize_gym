@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   pagos.init({
     id_socio: DataTypes.INTEGER,
     id_membresia: DataTypes.INTEGER,
-    total_a_pagar: DataTypes.FLOAT,
+    total_a_pagar: DataTypes.NUMERIC,
     fecha_pago: DataTypes.DATE,
     tipo_pago: DataTypes.INTEGER
   }, {

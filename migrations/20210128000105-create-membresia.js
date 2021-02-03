@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       costo: {
-        type: Sequelize.FLOAT
+        type: Sequelize.NUMERIC,
       },
       duracion: {
         type: Sequelize.INTEGER

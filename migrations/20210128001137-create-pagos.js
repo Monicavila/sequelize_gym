@@ -9,13 +9,25 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       id_socio: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        allowNull: false,
+        references: {
+          model: 'socios',
+          key: 'id'
+        }
       },
       id_membresia: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        allowNull: false,
+        references: {
+          model: 'membresia',
+          key: 'id'
+        }
       },
       total_a_pagar: {
-        type: Sequelize.FLOAT
+        type: Sequelize.NUMERIC
       },
       fecha_pago: {
         type: Sequelize.DATE

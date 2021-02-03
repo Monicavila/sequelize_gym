@@ -2,20 +2,31 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('socio_membresia', {
-      id: {
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
-      },
+     
       id_socio: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        allowNull: false,
+        references: {
+          model: 'socios',
+          key: 'id'
+        }
       },
       id_membresia: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        primaryKey: true,
+        allowNull: false,
+        references: {
+          model: 'membresia',
+          key: 'id'
+        }
       },
       promociones: {
-        type: Sequelize.FLOAT
+        type: Sequelize.NUMERIC,
+        eferences: {
+          model: 'pagos',
+          key: 'total_a_pagar'
+        }
       },
       createdAt: {
         allowNull: false,

@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   socio_membresia.init({
     id_socio: DataTypes.INTEGER,
     id_membresia: DataTypes.INTEGER,
-    promociones: DataTypes.FLOAT
+    promociones: DataTypes.NUEMERIC
   }, {
     sequelize,
     modelName: 'socio_membresia',
