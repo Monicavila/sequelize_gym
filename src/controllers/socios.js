@@ -1,4 +1,4 @@
-const { socios, pagos } = require("../models");
+import { socios, pagos } from "../../models";
 
 const obtenerSocio = async(req, res) => {
     try{

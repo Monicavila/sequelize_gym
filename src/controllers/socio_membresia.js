@@ -1,4 +1,4 @@
-const {socio_membresia, socios, membresia} = require("../models");
+import {socio_membresia, socios, membresia} from "../../models";
 
 const obtenerSocioMembresia = async (req, res) => {
     try{

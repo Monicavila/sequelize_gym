@@ -1,6 +1,6 @@
 const express = require ("express");
 
-const {obtenerSocioMembresia, agregarSocioMembresia} = require("../controllers/socio_membresia");
+import {obtenerSocioMembresia, agregarSocioMembresia} from "../controllers/socio_membresia";
 
 const router = express.Router();
 

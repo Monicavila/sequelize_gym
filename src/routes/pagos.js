@@ -1,6 +1,6 @@
 const express = require ("express");
 
-const {obtenerPagos, agregarPagos} = require("../controllers/pagos");
+import {obtenerPagos, agregarPagos} from "../controllers/pagos";
 
 const router = express.Router();
 

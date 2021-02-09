@@ -1,9 +1,9 @@
 const express = require("express");
 const logger = require("morgan");
-const sociosRouter = require("./routes/socios");
-const membresiaRouter = require("./routes/membresia");
-const pagosRouter = require("./routes/pagos");
-const socioMembresiaRouter = require("./routes/socio_membresia");
+import sociosRouter from "./routes/socios";
+import membresiaRouter from"./routes/membresia";
+import pagosRouter from "./routes/pagos";
+import socioMembresiaRouter from "./routes/socio_membresia";
 
 require("dotenv").config();
 
