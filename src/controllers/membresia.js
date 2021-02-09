@@ -47,8 +47,6 @@ const actualizarMembresia = async (req, res) => {
 
 const borrarMembresiaPorId = async (req, res) => {
     try {
-        const datos = req.body;
-        console.log(datos);
         const results = await membresia.destroy({
           where: { id: req.params.id },
         });
