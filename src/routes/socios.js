@@ -9,4 +9,4 @@ router.get("/socios/:id", obtenerSocioPorId);
 router.post("/socios", agregarSocio);
 router.put('/socios/:id', actualizarSocio);
 
-module.exports = router;
+export default router;

@@ -10,4 +10,4 @@ router.post("/membresias", agregarMembresia);
 router.put('/membresias/:id', actualizarMembresia);
 router.delete('/membresias/:id', borrarMembresiaPorId);
 
-module.exports = router;
+export default router;

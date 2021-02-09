@@ -7,4 +7,4 @@ const router = express.Router();
 router.get("/socio-membresia", obtenerSocioMembresia);
 router.post("/socio-membresia", agregarSocioMembresia);
 
-module.exports = router;
+export default router;

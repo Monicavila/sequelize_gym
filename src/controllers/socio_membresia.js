@@ -1,6 +1,6 @@
 import {socio_membresia, socios, membresia} from "../../models";
 
-const obtenerSocioMembresia = async (req, res) => {
+export const obtenerSocioMembresia = async (req, res) => {
     try{
         const results = await socio_membresia.findAll({include: [socios, membresia]});
         res.json({message: results});
@@ -9,7 +9,7 @@ const obtenerSocioMembresia = async (req, res) => {
     }
 }
 
-const agregarSocioMembresia = async (req, res) => {
+export const agregarSocioMembresia = async (req, res) => {
     const datos = req.body;
     console.log(datos);
     try{
@@ -18,9 +18,4 @@ const agregarSocioMembresia = async (req, res) => {
     }catch(error){
         console.log(error);
     }
-}
-
-module.exports = {
-    obtenerSocioMembresia,
-    agregarSocioMembresia
 }

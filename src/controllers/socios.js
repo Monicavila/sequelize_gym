@@ -1,6 +1,6 @@
 import { socios, pagos } from "../../models";
 
-const obtenerSocio = async(req, res) => {
+export const obtenerSocio = async(req, res) => {
     try{
         const results = await socios.findAll({include: [pagos]});
         res.json({message: results});
@@ -9,7 +9,7 @@ const obtenerSocio = async(req, res) => {
     }
 }
 
-const obtenerSocioPorId = async(req, res) => {
+export const obtenerSocioPorId = async(req, res) => {
     try{
         const results = await socios.findOne({where: {id: req.params.id}});
         res.json({message: results});
@@ -18,7 +18,7 @@ const obtenerSocioPorId = async(req, res) => {
     }
 }
 
-const agregarSocio = async(req, res) => {
+export const agregarSocio = async(req, res) => {
     const datos = req.body;
     console.log(datos);
     try{
@@ -29,7 +29,7 @@ const agregarSocio = async(req, res) => {
     }
 }
 
-const actualizarSocio = async(req, res) => {
+export const actualizarSocio = async(req, res) => {
     try{
         const datos = req.body;
         console.log(datos);
@@ -38,11 +38,4 @@ const actualizarSocio = async(req, res) => {
     }catch(error){
         console.log(error);
     }
-}
-
-module.exports = {
-    obtenerSocio,
-    obtenerSocioPorId,
-    agregarSocio,
-    actualizarSocio
 }

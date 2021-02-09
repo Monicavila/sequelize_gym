@@ -1,6 +1,6 @@
 import { membresia } from "../../models";
 
-const obtenerMembresia = async (req, res) => {
+export const obtenerMembresia = async (req, res) => {
   try {
     const results = await membresia.findAll();
     res.json({ message: results });
@@ -9,7 +9,7 @@ const obtenerMembresia = async (req, res) => {
   }
 };
 
-const obtenerMembresiaPorId = async (req, res) => {
+export const obtenerMembresiaPorId = async (req, res) => {
   try {
     const results = await membresia.findOne({ where: { id: req.params.id } });
     res.json({ message: results });
@@ -18,7 +18,7 @@ const obtenerMembresiaPorId = async (req, res) => {
   }
 };
 
-const agregarMembresia = async (req, res) => {
+export const agregarMembresia = async (req, res) => {
   const datos = req.body;
   console.log(datos);
   try {
@@ -29,7 +29,7 @@ const agregarMembresia = async (req, res) => {
   }
 };
 
-const actualizarMembresia = async (req, res) => {
+export const actualizarMembresia = async (req, res) => {
   try {
     const datos = req.body;
     console.log(datos);
@@ -45,7 +45,7 @@ const actualizarMembresia = async (req, res) => {
   }
 };
 
-const borrarMembresiaPorId = async (req, res) => {
+export const borrarMembresiaPorId = async (req, res) => {
     try {
         const results = await membresia.destroy({
           where: { id: req.params.id },
@@ -57,12 +57,4 @@ const borrarMembresiaPorId = async (req, res) => {
       } catch (error) {
         console.log(error);
       }
-};
-
-module.exports = {
-  obtenerMembresia,
-  obtenerMembresiaPorId,
-  agregarMembresia,
-  actualizarMembresia,
-  borrarMembresiaPorId,
 };
