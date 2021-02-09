@@ -22,7 +22,7 @@ module.exports = {
         }
       },
       promociones: {
-        type: Sequelize.NUMERIC,
+        type: Sequelize.FLOAT,
         eferences: {
           model: 'pagos',
           key: 'total_a_pagar'

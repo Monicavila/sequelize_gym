@@ -27,10 +27,10 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       peso: {
-        type: Sequelize.NUMERIC
+        type: Sequelize.FLOAT
       },
       estatura: {
-        type: Sequelize.NUMERIC
+        type: Sequelize.FLOAT
       },
       correo_electronico: {
         type: Sequelize.STRING
